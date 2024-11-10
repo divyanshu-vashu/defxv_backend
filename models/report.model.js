@@ -7,8 +7,11 @@ const reportSchema = new mongoose.Schema(
       required: true
     },
     message: {
-      type: mongoose.Schema.Types.Mixed,
-      required: true
+      type: [String], // Define message as an array of strings
+    },
+    counter: {
+      type: Number,
+      default: 0  // Initialize counter to 0 for new documents
     }
   },
   { timestamps: true }
