@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');  // Ensure CORS is available
+const cors = require('cors');
 const { resolve } = require('path');
 const connection = require("./db");
 const app = express();
@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 // API route for handling report data
 app.use("/api/sendreport", reportRoutes);
 app.use("/api/getreport", reportRoutes);
+app.use("/api/user", reportRoutes);  // Ensures /api/user routes are handled
 
 // Start the server
 app.listen(port, () => {
