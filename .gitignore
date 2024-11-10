@@ -1,4 +1,6 @@
 node_modules
 models/ecommerce
 models/todos
+.env
+/.env
 
