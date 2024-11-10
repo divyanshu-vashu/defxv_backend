@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 });
 
 // API route for handling report data
-app.use("/api/getreport", reportRoutes);
+app.use("/api/sendreport", reportRoutes);
 
 // Start the server
 app.listen(port, () => {
